@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
@@ -22,6 +23,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+
+@NamedQuery(query="select c from country c where c.continentIdx=:continentIdx", name="Country.findCountry")
 @Entity(name="country")
 @SequenceGenerator(name="country_idx_seq", sequenceName="country_idx_seq", initialValue=1, allocationSize=1)
 public class Country {
