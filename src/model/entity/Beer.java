@@ -1,0 +1,42 @@
+package model.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity(name="beer")
+@SequenceGenerator(name="beer_idx_seq", sequenceName="beer_idx_seq", initialValue=1, allocationSize=1)
+public class Beer {
+	@Id
+	@Column(name="beer_idx")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="beer_idx_seq")
+	private int beerIdx;
+	
+	@Column(name="name", length=20, nullable=false, unique=true)
+	private String name;
+	
+	@Column(name="alcohol", nullable=false)
+	private float alcohol;
+	
+	@Column(name="kinds", length=10, nullable=false)
+	private String kinds;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="country_idx")
+	private Country countryIdx;
+}
