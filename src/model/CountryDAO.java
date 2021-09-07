@@ -23,6 +23,7 @@ public class CountryDAO {
 	
 	/** 대륙에 속한 나라 검색  **/
 	public List<Country> getCountry(int continentIdx) {
+		
 		EntityManager em = DBUtil.getEntityManager();
 		List<Country> countryList = null;
 		try {
