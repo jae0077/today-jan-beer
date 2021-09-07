@@ -35,21 +35,21 @@
 		<div class="w3-row">
 			<!-- 대륙으로 나라조회 결과시 -->
 			<div class="w3-third">
-				<img src="../images/image1.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="../images/image2.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="../images/image3.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image1.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image2.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image3.jpg" style="width:100%" onclick="onClick(this)">
 			</div>
 			
 			<div class="w3-third">
-				<img src="../images/image4.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="../images/image5.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="../images/image6.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image4.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image5.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image6.jpg" style="width:100%" onclick="onClick(this)">
 			</div>
 			
 			<div class="w3-third">
-				<img src="../images/image7.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="../images/image8.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="../images/image9.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image7.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image8.jpg" style="width:100%" onclick="onClick(this)">
+				<img src="images/image9.jpg" style="width:100%" onclick="onClick(this)">
 			</div>
 		</div>
 

@@ -18,7 +18,7 @@ public class Controller extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String command = request.getParameter("command");
 		
-		if(command.equals("asia")) {
+		if(command.equals("continent")) {
 			countryAll(request, response);
 		}
 		
@@ -27,8 +27,9 @@ public class Controller extends HttpServlet {
 	public void countryAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "showError.jsp";
 		try {
-			request.setAttribute("countryAll", countryDAO.getCountry(Integer.parseInt(request.getParameter("continent_idx"))));
-			url = "asia.jsp";
+			int continent = Integer.parseInt(request.getParameter("continent"));
+			request.setAttribute("countryAll", countryDAO.getCountry(continent));
+			url = "continent/asia.jsp";
 		}catch(Exception s){
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
