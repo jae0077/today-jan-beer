@@ -18,34 +18,19 @@ public class BeerDAO {
 		return instance;
 	}
 	
-	public List<Beer> selectBeer(int country){
+	/** 나라별 맥주리스트 주회 **/
+	public List<Beer> selectBeer(int countryIdx){
 		
 		EntityManager em = DBUtil.getEntityManager();
 		List<Beer> beerList = null;
 		try {
-			beerList = (List<Beer>)em.createNamedQuery("Beer.findBeer").setParameter("countryIdx", em.find(Country.class, country)).getResultList();
+			beerList = (List<Beer>)em.createNamedQuery("Beer.findBeer").setParameter("countryIdx", em.find(Country.class, countryIdx)).getResultList();
 		}catch(Exception e) {
-//			e.printStackTrace();
+			e.printStackTrace();
 		}finally {
 			em.close();
 			em = null;
 		}return beerList;
 	}
 	
-	public boolean updateBeer(int beerIdx, float alcohol) {
-		EntityManager em = DBUtil.getEntityManager();
-		em.getTransaction().begin();
-		boolean result = false;
-		try {
-			em.find(Beer.class, beerIdx).setAlcohol(alcohol);
-			
-			em.getTransaction().commit();
-			result = true;
-		}catch(Exception e) {
-//			e.printStackTrace();
-			em.getTransaction().rollback();	
-		}finally {
-			em.close();
-		}return result;
-	}
 }

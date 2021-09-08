@@ -29,16 +29,19 @@ public class Beer {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="beer_idx_seq")
 	private int beerIdx;
 	
-	@Column(name="name", length=20, nullable=false, unique=true)
+	@Column(name="name", length=30, nullable=false, unique=true)
 	private String name;
 	
 	@Column(name="alcohol", nullable=false)
 	private float alcohol;
 	
-	@Column(name="kinds", length=10, nullable=false)
+	@Column(name="kinds", length=20, nullable=false)
 	private String kinds;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@Column(name="info", length=100, nullable=false)
+	private String info;
+	
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="country_idx")
 	private Country countryIdx;
 }
