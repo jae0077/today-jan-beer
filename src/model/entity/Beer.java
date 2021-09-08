@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
@@ -20,6 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity(name="beer")
+@NamedQuery(query="select b from beer b where b.countryIdx=:countryIdx", name="Beer.findBeer")
 @SequenceGenerator(name="beer_idx_seq", sequenceName="beer_idx_seq", initialValue=1, allocationSize=1)
 public class Beer {
 	@Id
