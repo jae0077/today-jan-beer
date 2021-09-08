@@ -10,8 +10,14 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
+<link href="https://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+<style>
+.w3-Sunflower {
+	font-family: "Sunflower", Sans-serif;
+}
+</style>
 <title>Insert title here</title>
 </head>
 <body>
@@ -37,26 +43,33 @@
 		<div class="w3-hide-large" style="margin-top: 83px"></div>
 
 		<!-- Photo grid -->
-		<div class="w3-row">
-			<!-- 대륙으로 나라조회 결과시 -->
-			<!-- div class="w3-third">
-				<img src="images/image1.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="images/image2.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="images/image3.jpg" style="width:100%" onclick="onClick(this)">
-			</div> -->
-			
-			<!-- <div class="w3-third">
-				<img src="images/image4.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="images/image5.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="images/image6.jpg" style="width:100%" onclick="onClick(this)">
-			</div> -->
-			
-			<!-- <div class="w3-third">
-				<img src="images/image7.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="images/image8.jpg" style="width:100%" onclick="onClick(this)">
-				<img src="images/image9.jpg" style="width:100%" onclick="onClick(this)">
-			</div>
-		</div> -->
+			<div class="w3-row">
+				<!-- 대륙으로 나라조회 결과시 -->
+				<c:choose>
+				    <c:when test="${not empty requestScope.selectCountryList}">
+					    <c:forEach items="${requestScope.selectCountryList}" var="data">
+							<div class="w3-third">
+			            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
+			            			<div class="w3-card w3-hover-opacity w3-display-container">
+										<img src="images/country/${data.imgPath}" style="width:100%">		
+				            			<div class="w3-display-middle w3-display-hover">
+				            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
+						            	</div>
+									</div>
+								</a>
+			            	</div>
+			       		</c:forEach>
+				    </c:when>
+				    <c:when test="${empty requestScope.selectCountryList}">
+            			<div class="w3-display-container">
+							<img src="images/country/empty.jpg" style="width:100%">		
+	            			<div class="w3-display-middle">
+	            				<p class="w3-xlarge font-effect-shadow-multiple">등록된 나라가 없습니다.</p>
+			            	</div>
+						</div>
+			    	</c:when>
+		    	</c:choose>
+       		</div>
 
 		<!-- Modal for full size images on click-->
 		<div id="modal01" class="w3-modal w3-black" style="padding-top: 0"
@@ -69,67 +82,9 @@
 			</div>
 		</div>
 
-		<article>
-	    <table border="1">
-        <tr>
-          <th>나라번호</th>
-          <th>나라이름</th>
-        </tr>
-		    <c:forEach items="${requestScope.selectCountry}" var="data">
-          <tr>
-            <td><a href="${url}controller?command=beer&country=${data.countryIdx}">${data.countryIdx}</a></td>
-            <td>${data.name}</td>
-          </tr>
-        </c:forEach>
-	    </table>
-	  </article>
-		
-
-
 		<!-- Footer -->
 		<footer class="w3-container w3-padding-32 w3-grey">
-			<div class="w3-row-padding">
-				<div class="w3-third">
-					<h3>INFO</h3>
-					<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-						condimentum, porta lectus vitae, ultricies congue gravida diam non
-						fringilla.</p>
-				</div>
-
-				<div class="w3-third">
-					<h3>BLOG POSTS</h3>
-					<ul class="w3-ul">
-						<li class="w3-padding-16 w3-hover-black">
-              <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width: 50px"> <span class="w3-large">Lorem</span><br>
-							<span>Sed mattis nunc</span>
-            </li>
-						<li class="w3-padding-16 w3-hover-black">
-              <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width: 50px"> <span class="w3-large">Ipsum</span><br>
-							<span>Praes tinci sed</span>
-            </li>
-					</ul>
-				</div>
-
-				<div class="w3-third">
-					<h3>POPULAR TAGS</h3>
-					<p>
-						<span class="w3-tag w3-black w3-margin-bottom">Travel</span>
-            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NewYork</span>
-            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span>
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
-					</p>
-				</div>
-			</div>
+			<jsp:include page="/common/footer.jsp"></jsp:include>
 		</footer>
 
 		<div class="w3-black w3-center w3-padding-24">

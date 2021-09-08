@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.DAO.BeerDAO;
 import model.DAO.CountryDAO;
+import model.entity.Country;
 
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
@@ -31,8 +32,8 @@ public class Controller extends HttpServlet {
 	public void selectCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "showError.jsp";
 		try {
-			int continent = Integer.parseInt(request.getParameter("continent"));
-				request.setAttribute("selectCountry", countryDAO.getCountry(continent));
+			int continentIdx = Integer.parseInt(request.getParameter("continent"));
+				request.setAttribute("selectCountryList", countryDAO.selectCountryList(continentIdx));
 				url = "continent/continent.jsp";
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
@@ -44,9 +45,13 @@ public class Controller extends HttpServlet {
 	public void selectBeer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "showError.jsp";
 		try {
-			int country = Integer.parseInt(request.getParameter("country"));
-			
-				request.setAttribute("selectBeer", beerDAO.selectBeer(country));
+			int countryIdx = Integer.parseInt(request.getParameter("country"));
+				Country test = countryDAO.selectCountry(countryIdx);
+				request.setAttribute("selectBeer", beerDAO.selectBeer(countryIdx));
+				request.setAttribute("selectCountry", test);
+				
+				System.out.println(test.getName());
+				System.out.println(request.getAttribute("selectBeer"));
 				url = "country/country.jsp";
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());

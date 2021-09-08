@@ -36,7 +36,7 @@ public class Country {
 	@Column(name="name", length=20, nullable=false, unique=true)
 	private String name;
 
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="continent_idx")
 	private Continent continentIdx;
 	
@@ -44,10 +44,10 @@ public class Country {
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="countryIdx")
 	private List<Beer> beerIdx;
 
-	@Override
-	public String toString() {
-		return "Country [countryIdx=" + countryIdx + ", name=" + name + ", continentIdx=" + continentIdx + ", beerIdx="
-				+ beerIdx + "]";
-	}
+	@Column(name="img_path", length=30, nullable=false, unique=true)
+	private String imgPath;
+	
+	@Column(name="info")
+	private String info;
 
 }
