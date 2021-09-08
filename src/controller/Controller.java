@@ -33,7 +33,7 @@ public class Controller extends HttpServlet {
 		try {
 			int continent = Integer.parseInt(request.getParameter("continent"));
 				request.setAttribute("selectCountry", countryDAO.getCountry(continent));
-				url = "continent/asia.jsp";
+				url = "continent/continent.jsp";
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
