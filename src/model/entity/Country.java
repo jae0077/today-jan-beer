@@ -44,4 +44,10 @@ public class Country {
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="countryIdx")
 	private List<Beer> beerIdx;
 
+	@Override
+	public String toString() {
+		return "Country [countryIdx=" + countryIdx + ", name=" + name + ", continentIdx=" + continentIdx + ", beerIdx="
+				+ beerIdx + "]";
+	}
+
 }

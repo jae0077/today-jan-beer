@@ -1,9 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String url = application.getContextPath() + "/";
 %>
+	
 	
 <!DOCTYPE html>
 <html>
@@ -45,6 +46,9 @@
 				<img src="images/image3.jpg" style="width:100%" onclick="onClick(this)">
 			</div> -->
 			
+			
+			
+			
 			<!-- <div class="w3-third">
 				<img src="images/image4.jpg" style="width:100%" onclick="onClick(this)">
 				<img src="images/image5.jpg" style="width:100%" onclick="onClick(this)">
@@ -70,19 +74,40 @@
 		</div>
 
 		<article>
-	    <table border="1">
-        <tr>
-          <th>나라번호</th>
-          <th>나라이름</th>
-        </tr>
-		    <c:forEach items="${requestScope.selectCountry}" var="data">
-          <tr>
-            <td><a href="${url}controller?command=beer&country=${data.countryIdx}">${data.countryIdx}</a></td>
-            <td>${data.name}</td>
-          </tr>
-        </c:forEach>
-	    </table>
-	  </article>
+	<table border="1">
+		<tr>
+			<th>맥주번호</th>
+			<th>맥주이름</th>
+			<th>맥주온도</th>
+			<th>맥주종류</th>
+		</tr>
+
+		<!-- ???
+		1. 모든 재능 기부 프로젝트 list 출력하기
+		2. 재능 기부자 id 클릭하면 상세 보기 화면으로 이동
+		3. 재능 수혜자 id 클릭하면 미완성 로직이기 때문에 blank 화면 
+	 -->
+		<c:forEach items="${requestScope.selectBeer}" var="data">
+			<tr>
+				<td>${data.beeri}</td>
+				<td>${data.name}</td>
+				<td>${data.alchol}</td>
+				<td>${data.kinds}</td>
+				<%-- <td>${data.beerIdx}</td>
+				 --%><%--<td><a
+					href="${url}?command=activist&activistId=${data.continentIdx}">${data.activistId}</a></td>
+				<td><a
+					href="${url}probono?command=recipient&recipientId=${data.beerIdx}">${data.beerIdx}</a></td>
+				<td>${data.projectContent}</td> --%>
+			</tr>
+		</c:forEach>
+
+
+
+
+
+	</table>
+	</article>
 		
 
 
@@ -99,23 +124,23 @@
 				<div class="w3-third">
 					<h3>BLOG POSTS</h3>
 					<ul class="w3-ul">
-						<li class="w3-padding-16 w3-hover-black">
-              <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width: 50px"> <span class="w3-large">Lorem</span><br>
-							<span>Sed mattis nunc</span>
-            </li>
-						<li class="w3-padding-16 w3-hover-black">
-              <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width: 50px"> <span class="w3-large">Ipsum</span><br>
-							<span>Praes tinci sed</span>
-            </li>
+						<li class="w3-padding-16 w3-hover-black"><img
+							src="/w3images/workshop.jpg" class="w3-left w3-margin-right"
+							style="width: 50px"> <span class="w3-large">Lorem</span><br>
+							<span>Sed mattis nunc</span></li>
+						<li class="w3-padding-16 w3-hover-black"><img
+							src="/w3images/gondol.jpg" class="w3-left w3-margin-right"
+							style="width: 50px"> <span class="w3-large">Ipsum</span><br>
+							<span>Praes tinci sed</span></li>
 					</ul>
 				</div>
 
 				<div class="w3-third">
 					<h3>POPULAR TAGS</h3>
 					<p>
-						<span class="w3-tag w3-black w3-margin-bottom">Travel</span>
-            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NewYork</span>
-            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+						<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span
+							class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New
+							York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
 						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span>
 						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span>
 						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
