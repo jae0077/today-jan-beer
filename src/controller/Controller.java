@@ -16,31 +16,24 @@ public class Controller extends HttpServlet {
 
 	private static CountryDAO countryDAO = CountryDAO.getInstance();
 	private static BeerDAO beerDAO = BeerDAO.getInstance();
-	
-	
 
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String command = request.getParameter("command");
 		
 		if (command.equals("continent")) {
 			selectCountry(request, response);
-		}
-		if (command.equals("beer")) {
+		} else if (command.equals("beer")) {
 			selectBeer(request, response);
 		}
-
 	}
-
+  
 	public void selectCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "showError.jsp";
 		try {
 			int continent = Integer.parseInt(request.getParameter("continent"));
-			
 				request.setAttribute("selectCountry", countryDAO.getCountry(continent));
 				url = "continent/asia.jsp";
-			
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
@@ -55,7 +48,6 @@ public class Controller extends HttpServlet {
 			
 				request.setAttribute("selectBeer", beerDAO.selectBeer(country));
 				url = "country/country.jsp";
-				System.out.println("--------------------------------");
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
