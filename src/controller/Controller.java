@@ -35,7 +35,6 @@ public class Controller extends HttpServlet {
 		try {
 			int continentIdx = Integer.parseInt(request.getParameter("continent"));
 				request.setAttribute("selectCountryList", countryDAO.selectCountryList(continentIdx));
-				
 				url = "continent/continent.jsp";
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
@@ -48,10 +47,9 @@ public class Controller extends HttpServlet {
 		String url = "showError.jsp";
 		try {
 			int countryIdx = Integer.parseInt(request.getParameter("country"));
-			List<Country> test = countryDAO.selectCountryName(countryIdx);
 			request.setAttribute("selectBeer", beerDAO.selectBeer(countryIdx));
 			request.setAttribute("selectCountry", countryDAO.selectCountry(countryIdx));
-			request.setAttribute("selectCountryName", test);
+			request.setAttribute("selectCountryName", countryDAO.selectCountryName(countryIdx));
 			
 			url = "country/country.jsp";
 		} catch (Exception s) {
@@ -60,6 +58,4 @@ public class Controller extends HttpServlet {
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
-	
-	
 }

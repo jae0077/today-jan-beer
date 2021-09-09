@@ -42,7 +42,7 @@ public class CountryDAO {
 		EntityManager em = DBUtil.getEntityManager();
 		Country country = null;
 		try {
-			country = em.find(Country.class, countryIdx); //
+			country = em.find(Country.class, countryIdx);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -51,7 +51,6 @@ public class CountryDAO {
 		}
 		return country;
 	}
-	
 	
 	public List<Country> selectCountryName(int countryIdx) {
 		
@@ -67,8 +66,5 @@ public class CountryDAO {
 		}
 		return countryList;
 	}
-	
-	
-	
 	
 }
