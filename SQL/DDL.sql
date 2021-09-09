@@ -14,20 +14,23 @@ DROP SEQUENCE country_idx_seq;
 -- 대륙
 CREATE TABLE continent (
     continent_idx NUMBER PRIMARY KEY,
-    name VARCHAR2(20) NOT NULL
+    name VARCHAR2(30) NOT NULL
 );
 -- 나라
 CREATE TABLE country (
     country_idx NUMBER PRIMARY KEY,
-    name VARCHAR2(20) NOT NULL,
-    continent_idx NUMBER NOT NULL
+    name VARCHAR2(30) NOT NULL,
+    continent_idx NUMBER NOT NULL,
+    img_path VARCHAR2(30) NOT NULL,
+	info VARCHAR2(200) NOT NULL
 );
 -- 맥주
 CREATE TABLE beer (
     beer_idx NUMBER PRIMARY KEY,
-    name VARCHAR2(20) NOT NULL,
+    name VARCHAR2(30) NOT NULL,
     alcohol FLOAT NOT NULL,
-    kinds VARCHAR2(15) NOT NULL,
+    kinds VARCHAR2(20) NOT NULL,
+    info VARCHAR2(100) NOT NULL,
     country_idx NUMBER
 );
 

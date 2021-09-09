@@ -24,6 +24,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
+@NamedQuery(query="select c from country c where c.continentIdx=(select c.continentIdx from country c where c.countryIdx=:countryIdx)", name="Country.findCountryName")
 @NamedQuery(query="select c from country c where c.continentIdx=:continentIdx", name="Country.findCountry")
 @Entity(name="country")
 @SequenceGenerator(name="country_idx_seq", sequenceName="country_idx_seq", initialValue=1, allocationSize=1)
@@ -36,12 +37,18 @@ public class Country {
 	@Column(name="name", length=20, nullable=false, unique=true)
 	private String name;
 
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="continent_idx")
 	private Continent continentIdx;
 	
 	@Column(name="beer_idx", nullable=true, unique=true)
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="countryIdx")
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="countryIdx")
 	private List<Beer> beerIdx;
+
+	@Column(name="img_path", length=30, nullable=false, unique=true)
+	private String imgPath;
+	
+	@Column(name="info")
+	private String info;
 
 }
