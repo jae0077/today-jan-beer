@@ -22,11 +22,9 @@ INSERT INTO country values(country_idx_seq.NEXTVAL, '덴마크', 2, 'denmark.jpg
 
 --오세아니아
 INSERT INTO country values(country_idx_seq.NEXTVAL, '뉴질랜드', 3);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '파푸아뉴기니', 3);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '호주', 3);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '팔라우', 3);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '투발루', 3);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '솔로몬제도', 3);
+
 --북아메리카
 INSERT INTO country values(country_idx_seq.NEXTVAL, '미국', 4);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '캐나다', 4);

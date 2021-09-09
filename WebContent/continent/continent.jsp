@@ -50,7 +50,7 @@
 					    <c:forEach items="${requestScope.selectCountryList}" var="data">
 							<div class="w3-third">
 			            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
-			            			<div class="w3-card w3-hover-opacity w3-display-container">
+			            			<div class="w3-hover-opacity w3-display-container">
 										<img src="images/country/${data.imgPath}" style="width:100%">		
 				            			<div class="w3-display-middle w3-display-hover">
 				            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
