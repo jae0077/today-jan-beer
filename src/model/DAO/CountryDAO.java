@@ -42,7 +42,7 @@ public class CountryDAO {
 		EntityManager em = DBUtil.getEntityManager();
 		Country country = null;
 		try {
-			country = em.find(Country.class, countryIdx); //
+			country = em.find(Country.class, countryIdx);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -50,6 +50,22 @@ public class CountryDAO {
 			em = null;
 		}
 		return country;
+	}
+	
+	/** 나라이름 조회  **/
+	public List<Country> selectCountryName(int countryIdx) {
+		
+		EntityManager em = DBUtil.getEntityManager();
+		List<Country> countryList = null;
+		try {
+			countryList = (List<Country>)em.createNamedQuery("Country.findCountryName").setParameter("countryIdx", countryIdx).getResultList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			em.close();
+			em = null;
+		}
+		return countryList;
 	}
 	
 }
