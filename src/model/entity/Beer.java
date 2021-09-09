@@ -38,6 +38,9 @@ public class Beer {
 	@Column(name="kinds", length=20, nullable=false)
 	private String kinds;
 	
+	@Column(name="img_path", length=30, nullable=false, unique=true)
+	private String imgPath;
+	
 	@Column(name="info", length=100, nullable=false)
 	private String info;
 	
