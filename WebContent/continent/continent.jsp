@@ -47,7 +47,44 @@
 				<!-- 대륙으로 나라조회 결과시 -->
 				<c:choose>
 				    <c:when test="${not empty requestScope.selectCountryList}">
-					    <c:forEach items="${requestScope.selectCountryList}" var="data">
+						<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="0" step="3" varStatus="status">
+		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
+		            			<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width:100%">		
+			            			<div class="w3-display-middle w3-display-hover">
+			            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
+					            	</div>
+								</div>
+							</a>
+						</c:forEach>
+		            	</div>
+		            	<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="1" step="3" varStatus="status">
+		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
+		            			<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width:100%">		
+			            			<div class="w3-display-middle w3-display-hover">
+			            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
+					            	</div>
+								</div>
+							</a>
+						</c:forEach>
+		            	</div>
+		            	<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="2" step="3" varStatus="status">
+		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
+		            			<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width:100%">		
+			            			<div class="w3-display-middle w3-display-hover">
+			            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
+					            	</div>
+								</div>
+							</a>
+						</c:forEach>
+		            	</div>
+		            	
+					    <%-- <c:forEach items="${requestScope.selectCountryList}" var="data" varStatus="status">
 							<div class="w3-third">
 			            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
 			            			<div class="w3-hover-opacity w3-display-container">
@@ -58,7 +95,7 @@
 									</div>
 								</a>
 			            	</div>
-			       		</c:forEach>
+			       		</c:forEach> --%>
 				    </c:when>
 				    <c:when test="${empty requestScope.selectCountryList}">
             			<div class="w3-display-container">
