@@ -22,32 +22,18 @@ INSERT INTO country values(country_idx_seq.NEXTVAL, '덴마크', 2, 'denmark.jpg
 
 --오세아니아
 INSERT INTO country values(country_idx_seq.NEXTVAL, '뉴질랜드', 3);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '파푸아뉴기니', 3);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '호주', 3);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '팔라우', 3);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '투발루', 3);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '솔로몬제도', 3);
+
 --북아메리카
 INSERT INTO country values(country_idx_seq.NEXTVAL, '미국', 4);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '캐나다', 4);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '멕시코', 4);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '과테말라', 4);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '쿠바', 4);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '자메이카', 4);
+
 --남아메리카
-INSERT INTO country values(country_idx_seq.NEXTVAL, '아르헨티나', 5);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '에콰도르', 5);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '브라질', 5);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '우루과이', 5);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '칠레', 5);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '페루', 5);
---아프리카
-INSERT INTO country values(country_idx_seq.NEXTVAL, '모로코', 6);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '나이지리아', 6);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '이집트', 6);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '케냐', 6);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '에티오피아', 6);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '모리셔스', 6);
 
 --한국
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '카스', 4.5, '라거', 'test', 1, 'imagePath');
@@ -77,16 +63,10 @@ INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '칼스버그', 5.0, '라거', 6);
 
 --뉴질랜드
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '엔지 퓨어', 5.0, '페일 라거', 1);
---파푸아뉴기니
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, ' ', 4.4, '라거', 2);
 --호주
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '빅토리아 비터', 4.6, '비터 라거', 3);
 --팔라우
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '레드 루스터', 5.0, '라거', 4);
---투발루
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---솔로몬제도
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
 
 --미국
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
@@ -94,35 +74,10 @@ INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
 --멕시코
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
---과테말라
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.2, '라거', 4);
---쿠바
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---자메이카
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
 
---아르헨티나
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
 --에콰도르
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
 --브라질
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
---우루과이
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.2, '라거', 4);
 --칠레
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---페루
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
-
---모로코
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
---나이지리아
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
---이집트
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
---케냐
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.2, '라거', 4);
---에티오피아
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---모리셔스
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);

@@ -52,15 +52,11 @@
 			<h4><b>${requestScope.selectCountry.name}</b></h4>
 			<img src="images/country/${requestScope.selectCountry.imgPath}" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
 			<div class="w3-content w3-justify" style="max-width:600px">
-				<h4>My Name</h4>
-				<p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-				  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-				  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<p>
+					${requestScope.selectCountry.info}
 				</p>
-				<p>mail: example@example.com</p>
-				<p>tel: 5353 35531</p>
 
-				<h4 class="w3-padding-16">대표 맥주</h4>
+				<h4 class="w3-padding-16" style="text-align: center">대표 맥주</h4>
 				<div class="w3-row-padding" style="margin:0 -16px">
 					<c:forEach items="${requestScope.selectBeer}" var="data">
 						<div class="w3-half w3-margin-bottom">
