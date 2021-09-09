@@ -7,25 +7,36 @@
 <div class="w3-row-padding">
 	<div class="w3-third">
 		<h3>INFO</h3>
-		<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-			condimentum, porta lectus vitae, ultricies congue gravida diam non
-			fringilla.</p>
+		<p style="font-size:0.5em">여러분들의 후원이 저희의 현지 답사에 큰 도움이 됩니다. 많은 관심 부탁드립니다.<br><br></p>
+		<div class="w3-twothird w3-container">
+			<p style="font-size:0.5em">
+				신한 110-422-709379 / 차재훈<br>
+				기업 165-107053-01-011 / 김지명<br>
+				국민 475801-01-095552 / 방지원
+			</p>
+		</div>
+		
+		<div class="w3-third w3-container">
+		<br>
+			<a href="https://open.kakao.com/o/gkW6SUtd" target="_blank" style="text-decoration:none">
+           		<img src="images/kakaotalk.png" style="width: 30px">
+        	</a>
+       	</div>	
 	</div>
 
 	<div class="w3-third">
 		<h3>BLOG POSTS</h3>
 		<ul class="w3-ul">
-			<a href=""><li class="w3-padding-16 w3-hover-black">
-           		<img src="images/jaehun.jpg" class="w3-left w3-round w3-margin-right" style="width: 50px"> <span class="w3-large">coblin</span><br>
-         		<span>Sed mattis nunc</span>
+			<a href="https://coblin.tistory.com/" target="_blank" style="text-decoration:none">
+			<li class="w3-padding-16 w3-hover-black">
+           		<img src="images/jaehun.jpg" class="w3-left w3-round w3-margin-right" style="width: 30px"> <span class="w3-large w3-jua" style="font-size:0.5em">coblin</span><br>
          	</li></a>
-			<a href=""><li class="w3-padding-16 w3-hover-black">
-         	    <img src="images/jimyeung.jpg" class="w3-left w3-round w3-margin-right" style="width: 50px"> <span class="w3-large">jimyeung</span><br>
-            	<span>Sed mattis nunc</span>
+			<a href="https://jimyeung-dev-til.tistory.com/" target="_blank" style="text-decoration:none">
+			<li class="w3-padding-16 w3-hover-black">
+         	    <img src="images/jimyeung.jpg" class="w3-left w3-round w3-margin-right" style="width: 30px"> <span class="w3-large w3-jua" style="font-size:0.5em">ganjimyeung</span><br>
             </li></a>
-            <a href=""><li class="w3-padding-16 w3-hover-black">
-         	    <img src="images/jiwon.jpg" class="w3-left w3-round w3-margin-right" style="width: 50px"> <span class="w3-large">jiwon</span><br>
-            	<span>Sed mattis nunc</span>
+            <a href="https://url.kr/5ex8ra" target="_blank"><li class="w3-padding-16 w3-hover-black" style="text-decoration:none">
+         	    <img src="images/jiwon.jpg" class="w3-left w3-round w3-margin-right" style="width: 30px"> <span class="w3-large w3-jua" style="font-size:0.5em">bbang</span><br>
             </li></a>
 		</ul>
 	</div>
