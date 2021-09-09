@@ -33,50 +33,67 @@ INSERT INTO country values(country_idx_seq.NEXTVAL, '브라질', 5, 'brazil.jpg'
 INSERT INTO country values(country_idx_seq.NEXTVAL, '칠레', 5, 'chile.jpg', '수도 : 산티아고<br>인구수 : 약 1,895만명<br>북중부의 연중 온난하고 건조한 맑은 기후, 안데스 산맥의 높은 해발고도, 비교적 안정된 국내정세 덕분에 하와이 마우나케아 산과 함께 지상에 건설되는 거대 망원경 건설의 최적지로 꼽힙니다. 국토 중앙을 안데스 산맥이 가로 막고 있고 길고 특이하게 생긴 국토 지형 때문에 사람들의 주거 공간이 태평양 연안 저지대 일대에 제한되어 있습니다. 옆나라 아르헨티나와 더불어 라틴아메리카 지역에서 영토 대비에 비해 인구가 적은 국가이기도 합니다.');
 
 
---맥주
+------------맥주
 --한국
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '카스', 4.5, '라거', 'test', 1, 'imagePath');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '카스', 4.5, '라거', ' 젊은층에게 가장 인기있는 맥주, 카스 광고에서 톡하게산다는 문구처럼 카스의 참맛은 톡! 쏘는 상쾌함에 있다, 무난한 맥주를 고를대 나도 무조건 카스만 마신다. ', 1, 'korea1.jpeg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '테라', 4.6, '라거', ' 호주 골든트라이앵글 청정맥아로 만든 100% 리얼탄산 맥주! 기존의 주입식 탄산이 아닌 발효 공정에서 발생하는 리얼탄산 활용', 1, 'korea2.jpg');
 --중국
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '칭따오', 5.0, '라거', 2);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '칭따오', 4.7, '라거', ' 전 세계적으로 가장 유명한 맥주, 중국에 살던 독일인을 위해 독잉린이 만들었다. 중국 양꼬치구이 등과 잘 어울린다. ', 2, 'china1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '옌징', 4.5, '라거', '도수는 칭따오와 비슷하지만 좀 더 부드러워서 부담없이 마실 수 있으면서, 맥주 본연의 향을 충분히 가지고 있다. ', 2, 'china2.png');
 --일본
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '아사히', 5.0, '페일 라거', 3);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '아사히', 5.0, '페일 라거', '수퍼 드라이 이전까지 아사히 맥주의 일본 내 시장점유율은 10%정도였으나 출시 이후 50%까지 치솟았다. 가벼우면서 깨끗한 청량감과 드라이한 맛으로 마무리', 3, 'japan1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '기린', 5.0, '페일 라거', '이시방 시보리 첫 번째로 짜낸 맥즙만을 사용하는 독특한 제조법을 사용. 다른 제조법에 비해 비용이 많이 들지만, 풍부한 맛을 내며 섬세한 일본음식과 잘 어울림', 3, 'japan2.jpg');
 --베트남
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '비아 하노이', 4.2, '라거', 4);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '사이공 비어', 5.3, '라거비어', ' 베트남 국민 맥주 중 하나로 맥주의 분연의 향이 강하며 먹는 순간 도수가 높다는 것을 느낄 수 있다. ', 4, 'vietnam1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '비아 하노이', 4.2, '라거', '고품질 홉의 향과 효모의 진한 맛이 특징인 맥아 맥주. 하얀색 거품이 인상적이다.', 4, 'vietnam2.jpg');
 --태국
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '창 비어', 5.2, '라거', 5);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '창 비어', 5.2, '라거', '세계적으로 많이 수출 되는 맥주로 진한 맛을 선호하는 사람들에게 잘 어울리는 맥주이다', 5, 'thailand.jpeg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '싱하 맥주', 5, '라거', '은근한 청량감, 기분을 업하고 싶을때 하기 좋음', 5, 'thailand2.jpg');
 --라오스
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '비어라오', 5.0, '라거', 6);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '비어라오', 5.0, '라거', '재스민 쌀로 만든 부드러운 풍미의 맥주이다. 종류가 다양한데 오리지널과 흑맥주인 블랙, 카오까이노이라는 품종의 쌀로 빚은 골드 세종류가 유명', 6, 'laos1.jpg');
 
 --독일
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '벡스', 5.0, '라거', 1);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '벡스', 5.0, '라거',' 독일 정통 라거 맥주로 옅은 황금색으로 고급스러운 느낌이나며 약간 쓴 홉의 맛이 난다. 과일향이 나며 목 넘김이 좋다', 7, 'germany1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '파울라너', 5.0, '라거',' 독일 대표적인 맥주는 파울라너는 깊은 밀의 풍미를 가지고 있는 맥주로 달달한 밀과 바나나 향기가 난다. 가볍고 부드러운 맛으로 누구나 마시기 편한 목넘김으로 맥주로 즐길 수 있다. ', 7, 'germany2.jpeg');
 --체코
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '필스너 우르겔', 4.4, '라거', 2);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '필스너 우르겔', 4.4, '라거',' 흑맥주 일색이던 시절 은은한 황금빛으로 사랑을 받기 시작했다. 황금색 맥주의 원조이며 사츠 홉의 씁쓸한 맛이 잘 조화돼 있다.', 8, 'czech1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '코젤', 3.8, '라거',' 도수가 3.8로 제일 낮고 설탕이 들어가 카라멜의 향과 맛이 뚜렷하고 맥주중에서는 달콤한 편이다. 잔에 시나몬 가루를 뿌려 나오기도 한다. ', 8, 'czech2.jpg');
 --영국
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '뉴캐슬 브라운 에일', 4.7, '브라운 에일', 3);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '뉴캐슬 브라운 에일', 4.7, '브라운 에일',' 영국에서 가장 많이 팔리는 맥주, 파란색 별 모양의 로고가 눈에 띈다. 견과류와 과일향이 나고 쓴맛이 과 달달한 맛이 난다.',  9, 'england1.jpeg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '마일드', 3.6, '브라운 에일',' 도수가 비교적 약한 편이며 연한 맛의 자극적이지 않은 물같은 맥주를 좋아하는 분들께 추천한다.',  9, 'england2.jpeg');
 --벨기에
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '스텔라 아르투아', 5.2, '라거', 4);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '호가든', 4.9, '라거','밀 질배지로 유명한 호가든 마을에서 유래됐다. 오렌지 껍질 향이 나는 대표 화이트 맥주. ',  10, 'belgium1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '스텔라 아르투아', 5.2, '라거',' 맥주마을 루벤에서 유래된 645년 전통의 라거 맥주',  10, 'belgium2.jpg');
 --네덜란드
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '하이네켄', 5.0, '라거', 5);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '하이네켄', 5.0, '라거',' 세계3대 맥주이다. 달달한 곡물향이 느껴지고 강하지 않은 홉의 맛을 느낄 수 있다. ',  11, 'netherland1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '그롤쉬 프리미엄라거', 5.0, '라거',' 스윙톱이라 불리는 독특한 마개가 특징. 일반적으로 4주 숙성하는 다른 맥주와 달리 8주간 숙성해 향이 풍부하고 오래간다.',  11, 'netherland2.jpg');
 --덴마크
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '칼스버그', 5.0, '라거', 6);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '칼스버그', 5.0, '라거',' 영국 프리미어리그 리버풀 축구단의 스폰서라 그런지 역동적 이미지를 가지고 있고 부드러운 거품, 쌉싸름한 향과 맛, 부담 없은 목넘김이 특징이다.',  12, 'denmark1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '지퍼 필스', 5.4, '페일 라거',' 엷은 황금색. 안정된 하얀 거품이 특징. 고급스러운 홉의 아로마가 뒷맛을 지배하여 전체적으로 드라이함. 기다린 원통형의 전용잔에 따라 마신다. ',  12, 'denmark2.jpg');
 
 --뉴질랜드
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '엔지 퓨어', 5.0, '페일 라거', 1);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '몬티스IPA', 5.0, '비터 라거', '부드럽고 순하다. 라이트 하면서 향기 보다는 맛을 살린 맥주로 삽싸름함이 통통튄다. 거부감이 없으며 약한 시트러스함과 과실향이 스쳐감',  13, 'newzealand1.jpg');
 --호주
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '빅토리아 비터', 4.6, '비터 라거', 3);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '포스터스', 4.9, '비터 라거', ' 밝은 황금색에 크립과 같은 거품이 특징이다. 가벼운 맥아 향에 깨끗한 홉의 끝맛이 느껴진다.',  14, 'austraila1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '포엑스', 4.5, '비터 라거', ' 호주 최대의 맥주회사 포스터스의 대표 맥주.엑스포트 라거 호주 퀸즐랜드에서 제조되며 깊은 청량감을 자랑한다.',  14, 'austraila2.jpg');
 --팔라우
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '레드 루스터', 5.0, '라거', 4);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '레드 루스터', 5.0, '라거', '팔라우는 닭을 귀하게 여겨 닭그림이 들어간 듯 하다. 호불호는 많이 갈린다고 한다. ',  15, 'palaou.jpeg');
 
 --미국
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '버드와이저', 5.0, '에일', ' 부동의 세계 판매 1위. 체코의 부드바르를 기원으로 하지만 미국 방식으로 새롭게 만들어졌다. 쌉싸름한 홉 맛과 풍부한 상쾌함이 특징이다',  16, 'usa1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '밀러', 4.6, '에일', ' 특허를 받은 세라믹 여과기술로 맥주향이 날아가는 것을 막아 병으로 즐기는 생맥주 개념 도입, 달콤한 옥수수향과 맛이 나므로 가볍게 즐길 수 있다.',  16, 'usa2.jpeg');
 --캐나다
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '무스헤드 라거', 5, '라거', ' 캐나다에서 가장 오래된 맥주중 하나다. 묵은 효모를 사용하고 오랜 시간 양조를 거치는 것이 특징이다.',  17, 'canada1.png');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '벨지안 화이트에일', 4.4, '라거', ' 예상에 비해 향이 그득그득한 맥주의 느낌은 강하게 들지 않는다.',  17, 'canada2.jpg');
 --멕시코
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '코로나', 4.6, '페일라거', ' 밝고 엷은 노란색, 라임을 넣어 마시는 맥주로 유명하다. 쓴맛이 적고 가벼워 청량음료 같은 맥주. 옥수수가 함유되어있다.',  18, 'mexico1.jpg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '파시피코', 4.7, '필스너', ' 멕시코 북부지방에서 즐겨마시는 맥주. 미국에 수출하여 미국 맥주시장 1위를 기록하는 모델',  18, 'mexico2.jpg');
 
 --에콰도르
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '바이엘라', 4.4, '라거', '공항라운지와 과야킬의 초대형 마트에서만 볼 수 있을정도로 쉽게 구하기 힘드로 나름 비싼 프리미엄 맥주이다 ',  19, 'ecuador.jpeg');
 --브라질
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '스콜', 4.7, '브라운 에일', ' 옥수수를 비롯해 여러가지 첨가물들이 맥주안에 포함 되어있어 청량한 느낌을 갖고 황금색을 띈다.',  20, 'brazil1.jpeg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '안타르치카', 4.7, '브라운 에일', '브라질 대표음료로 탄산음료 판매량의 70%를 차지, 세계 15대 음료 안에 들 정도로 인기가 많다. ',  20, 'brazil2.png');
 --칠레
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '아스트랄', 5.0, '라거', '실제론 페트맥주막한 크기로 물 좋기ㅗ 유명하다는 파타고니아 지방에서 생산된다는 맥주이다.',  21, 'chile1.jpeg');
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '커스트맨', 5.0, '라거', ' 빵, 햄, 치즈와 함께 마시기 좋은 맥주로 병이 이쁘게 나와서 병을 따로 모은 사람들도 많다.',  21, 'chile2.jpeg');
