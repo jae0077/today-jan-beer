@@ -2,6 +2,8 @@ package controller;
 
 import java.io.IOException;
 
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,13 +48,11 @@ public class Controller extends HttpServlet {
 		String url = "showError.jsp";
 		try {
 			int countryIdx = Integer.parseInt(request.getParameter("country"));
-				Country test = countryDAO.selectCountry(countryIdx);
-				request.setAttribute("selectBeer", beerDAO.selectBeer(countryIdx));
-				request.setAttribute("selectCountry", test);
-				
-				System.out.println(test.getName());
-				System.out.println(request.getAttribute("selectBeer"));
-				url = "country/country.jsp";
+			request.setAttribute("selectBeer", beerDAO.selectBeer(countryIdx));
+			request.setAttribute("selectCountry", countryDAO.selectCountry(countryIdx));
+			request.setAttribute("selectCountryName", countryDAO.selectCountryName(countryIdx));
+			
+			url = "country/country.jsp";
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();

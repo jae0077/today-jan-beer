@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	String url = application.getContextPath() + "/";
+%>
 <div class="w3-row-padding">
 	<div class="w3-third">
 		<h3>INFO</h3>
@@ -25,20 +29,22 @@
 	<div class="w3-third">
 		<h3>POPULAR TAGS</h3>
 		<p>
-			<span class="w3-tag w3-black w3-margin-bottom">Travel</span>
-         <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NewYork</span>
-         <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span>
-			<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+		<c:choose>
+			<c:when test="${not empty requestScope.selectCountryList}">
+				<c:forEach items="${requestScope.selectCountryList}" var="data">
+					<a href="${url}controller?command=beer&country=${data.countryIdx}">
+						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">${data.name}</span>
+					</a>
+				</c:forEach>
+			</c:when>
+			<c:when test="${not empty requestScope.selectCountryName}">
+				<c:forEach items="${requestScope.selectCountryName}" var="data2">
+					<a href="${url}controller?command=beer&country=${data2.countryIdx}">
+						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">${data2.name}</span>
+					</a>
+				</c:forEach>
+			</c:when>
+		</c:choose>
 		</p>
 	</div>
 </div>

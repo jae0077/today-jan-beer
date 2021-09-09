@@ -32,6 +32,6 @@ public class Continent {
 	private String name;
 	
 	@Column(name="country_idx", nullable=true, unique=true)
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="continentIdx")
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="continentIdx")
 	private List<Country> countryIdx;
 }
