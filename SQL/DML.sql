@@ -5,23 +5,21 @@ INSERT INTO continent values(continent_idx_seq.NEXTVAL, '북아메리카');
 INSERT INTO continent values(continent_idx_seq.NEXTVAL, '남아메리카');
 INSERT INTO continent values(continent_idx_seq.NEXTVAL, '아프리카');
 
-SELECT * FROM CONTINENT;
-
-
 --아시아
-INSERT INTO country values(country_idx_seq.NEXTVAL, '한국', 1);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '중국', 1);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '일본', 1);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '베트남', 1);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '태국', 1);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '라오스', 1);
+INSERT INTO country values(country_idx_seq.NEXTVAL, '한국', 1, 'korea.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '중국', 1, 'china.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '일본', 1, 'japan.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '베트남', 1, 'vietnam.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '태국', 1, 'thailand.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '라오스', 1, 'laos.jpg', 'test');
 --유럽
-INSERT INTO country values(country_idx_seq.NEXTVAL, '독일', 2);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '체코', 2);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '영국', 2);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '벨기에', 2);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '네덜란드', 2);
-INSERT INTO country values(country_idx_seq.NEXTVAL, '덴마크', 2);
+INSERT INTO country values(country_idx_seq.NEXTVAL, '독일', 2, 'germany.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '체코', 2, 'czech_republic.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '영국', 2, 'england.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '벨기에', 2, 'belgium.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '네덜란드', 2, 'netherlands.jpg', 'test');
+INSERT INTO country values(country_idx_seq.NEXTVAL, '덴마크', 2, 'denmark.jpg', 'test');
+
 --오세아니아
 INSERT INTO country values(country_idx_seq.NEXTVAL, '뉴질랜드', 3);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '파푸아뉴기니', 3);
@@ -51,11 +49,8 @@ INSERT INTO country values(country_idx_seq.NEXTVAL, '케냐', 6);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '에티오피아', 6);
 INSERT INTO country values(country_idx_seq.NEXTVAL, '모리셔스', 6);
 
-SELECT * FROM COUNTRY;
-
-
 --한국
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '카스', 4.5, '라거', 1);
+INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '카스', 4.5, '라거', 'test', 1, 'imagePath');
 --중국
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '칭따오', 5.0, '라거', 2);
 --일본
@@ -131,7 +126,3 @@ INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.2, '라거', 4);
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
 --모리셔스
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
-
-
-
-SELECT * FROM BEER;

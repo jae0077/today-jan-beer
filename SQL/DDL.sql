@@ -30,8 +30,9 @@ CREATE TABLE beer (
     name VARCHAR2(30) NOT NULL,
     alcohol FLOAT NOT NULL,
     kinds VARCHAR2(20) NOT NULL,
-    info VARCHAR2(100) NOT NULL,
-    country_idx NUMBER
+    info VARCHAR2(200) NOT NULL,
+    country_idx NUMBER,
+    img_path VARCHAR2(30) NOT NULL
 );
 
 ALTER TABLE country ADD FOREIGN KEY (continent_idx) REFERENCES continent (continent_idx);
