@@ -13,11 +13,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
 <link href="https://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Jua:400" rel="stylesheet">
 <style>
 .w3-Sunflower {
 	font-family: "Sunflower", Sans-serif;
 }
+.w3-Jua {
+	font-family: "Jua", Sans-serif;
+}
 </style>
+
 <title>Insert title here</title>
 </head>
 <body>
@@ -53,7 +58,7 @@
 		            			<div class="w3-hover-opacity w3-display-container">
 									<img src="images/country/${data.imgPath}" style="width:100%">		
 			            			<div class="w3-display-middle w3-display-hover">
-			            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
+			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
 					            	</div>
 								</div>
 							</a>
@@ -65,7 +70,7 @@
 		            			<div class="w3-hover-opacity w3-display-container">
 									<img src="images/country/${data.imgPath}" style="width:100%">		
 			            			<div class="w3-display-middle w3-display-hover">
-			            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
+			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
 					            	</div>
 								</div>
 							</a>
@@ -77,7 +82,7 @@
 		            			<div class="w3-hover-opacity w3-display-container">
 									<img src="images/country/${data.imgPath}" style="width:100%">		
 			            			<div class="w3-display-middle w3-display-hover">
-			            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
+			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
 					            	</div>
 								</div>
 							</a>
@@ -101,7 +106,7 @@
             			<div class="w3-display-container">
 							<img src="images/country/empty.jpg" style="width:100%">		
 	            			<div class="w3-display-middle">
-	            				<p class="w3-xlarge font-effect-shadow-multiple">등록된 나라가 없습니다.</p>
+	            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">등록된 나라가 없습니다.</p>
 			            	</div>
 						</div>
 			    	</c:when>
