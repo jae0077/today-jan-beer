@@ -4,26 +4,30 @@
 <%
 	String url = application.getContextPath() + "/";
 %>
-	
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
-<link href="https://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Jua:400" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
+<link href="https://fonts.googleapis.com/css?family=Sunflower:500,700"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Jua:400"
+	rel="stylesheet">
 <style>
 .w3-Sunflower {
 	font-family: "Sunflower", Sans-serif;
 }
+
 .w3-Jua {
 	font-family: "Jua", Sans-serif;
 }
 </style>
 
-<title>Insert title here</title>
+<title>오늘 잔 beer</title>
 </head>
 <body>
 	<nav
@@ -34,12 +38,15 @@
 	</nav>
 
 	<!-- Top menu on small screens -->
-	<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+	<header
+		class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
 		<jsp:include page="/common/header.jsp"></jsp:include>
 	</header>
 
 	<!-- Overlay effect when opening sidebar on small screens -->
-	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor: pointer" title="close side menu" id="myOverlay"></div>
+	<div class="w3-overlay w3-hide-large w3-animate-opacity"
+		onclick="w3_close()" style="cursor: pointer" title="close side menu"
+		id="myOverlay"></div>
 
 	<!-- !PAGE CONTENT! -->
 	<div class="w3-main" style="margin-left: 300px">
@@ -48,70 +55,64 @@
 		<div class="w3-hide-large" style="margin-top: 83px"></div>
 
 		<!-- Photo grid -->
-			<div class="w3-row">
-				<!-- 대륙으로 나라조회 결과시 -->
-				<c:choose>
-				    <c:when test="${not empty requestScope.selectCountryList}">
-						<div class="w3-third">
-						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="0" step="3" varStatus="status">
-		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
-		            			<div class="w3-hover-opacity w3-display-container">
-									<img src="images/country/${data.imgPath}" style="width:100%">		
-			            			<div class="w3-display-middle w3-display-hover">
-			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
-					            	</div>
-								</div>
-							</a>
-						</c:forEach>
-		            	</div>
-		            	<div class="w3-third">
-						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="1" step="3" varStatus="status">
-		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
-		            			<div class="w3-hover-opacity w3-display-container">
-									<img src="images/country/${data.imgPath}" style="width:100%">		
-			            			<div class="w3-display-middle w3-display-hover">
-			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
-					            	</div>
-								</div>
-							</a>
-						</c:forEach>
-		            	</div>
-		            	<div class="w3-third">
-						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="2" step="3" varStatus="status">
-		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
-		            			<div class="w3-hover-opacity w3-display-container">
-									<img src="images/country/${data.imgPath}" style="width:100%">		
-			            			<div class="w3-display-middle w3-display-hover">
-			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
-					            	</div>
-								</div>
-							</a>
-						</c:forEach>
-		            	</div>
-		            	
-					    <%-- <c:forEach items="${requestScope.selectCountryList}" var="data" varStatus="status">
-							<div class="w3-third">
-			            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
-			            			<div class="w3-hover-opacity w3-display-container">
-										<img src="images/country/${data.imgPath}" style="width:100%">		
-				            			<div class="w3-display-middle w3-display-hover">
-				            				<p class="w3-xlarge font-effect-shadow-multiple">${data.name}</p>
-						            	</div>
+		<div class="w3-row">
+			<!-- 대륙으로 나라조회 결과시 -->
+			<c:choose>
+				<c:when test="${not empty requestScope.selectCountryList}">
+					<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data"
+							begin="0" step="3" varStatus="status">
+							<a
+								href="${url}controller?command=beer&country=${data.countryIdx}">
+								<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width: 100%">
+									<div class="w3-display-middle w3-display-hover">
+										<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
 									</div>
-								</a>
-			            	</div>
-			       		</c:forEach> --%>
-				    </c:when>
-				    <c:when test="${empty requestScope.selectCountryList}">
-            			<div class="w3-display-container">
-							<img src="images/country/empty.jpg" style="width:100%">		
-	            			<div class="w3-display-middle">
-	            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">등록된 나라가 없습니다.</p>
-			            	</div>
+								</div>
+							</a>
+						</c:forEach>
+					</div>
+					<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data"
+							begin="1" step="3" varStatus="status">
+							<a
+								href="${url}controller?command=beer&country=${data.countryIdx}">
+								<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width: 100%">
+									<div class="w3-display-middle w3-display-hover">
+										<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
+									</div>
+								</div>
+							</a>
+						</c:forEach>
+					</div>
+					<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data"
+							begin="2" step="3" varStatus="status">
+							<a
+								href="${url}controller?command=beer&country=${data.countryIdx}">
+								<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width: 100%">
+									<div class="w3-display-middle w3-display-hover">
+										<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
+									</div>
+								</div>
+							</a>
+						</c:forEach>
+					</div>
+				</c:when>
+				<c:when test="${empty requestScope.selectCountryList}">
+					<div class="w3-display-container">
+						<img src="images/country/empty.jpg" style="width: 100%">
+						<div class="w3-display-middle">
+							<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">등록된
+								나라가 없습니다.</p>
 						</div>
-			    	</c:when>
-		    	</c:choose>
-       		</div>
+					</div>
+				</c:when>
+			</c:choose>
+		</div>
 
 		<!-- Modal for full size images on click-->
 		<div id="modal01" class="w3-modal w3-black" style="padding-top: 0"
