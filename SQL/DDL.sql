@@ -22,7 +22,7 @@ CREATE TABLE country (
     name VARCHAR2(30) NOT NULL,
     continent_idx NUMBER NOT NULL,
     img_path VARCHAR2(30) NOT NULL,
-	info VARCHAR2(200) NOT NULL
+	info VARCHAR2(1000) NOT NULL
 );
 -- 맥주
 CREATE TABLE beer (
@@ -30,7 +30,7 @@ CREATE TABLE beer (
     name VARCHAR2(30) NOT NULL,
     alcohol FLOAT NOT NULL,
     kinds VARCHAR2(20) NOT NULL,
-    info VARCHAR2(200) NOT NULL,
+    info VARCHAR2(1000) NOT NULL,
     country_idx NUMBER,
     img_path VARCHAR2(30) NOT NULL
 );
