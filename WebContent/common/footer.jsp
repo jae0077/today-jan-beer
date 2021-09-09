@@ -48,14 +48,14 @@
 			<c:when test="${not empty requestScope.selectCountryList}">
 				<c:forEach items="${requestScope.selectCountryList}" var="data">
 					<a href="${url}controller?command=beer&country=${data.countryIdx}" style="text-decoration:none">
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">${data.name}</span>
+						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom w3-Jua">${data.name}</span>
 					</a>
 				</c:forEach>
 			</c:when>
 			<c:when test="${not empty requestScope.selectCountryName}">
 				<c:forEach items="${requestScope.selectCountryName}" var="data2">
 					<a href="${url}controller?command=beer&country=${data2.countryIdx}" style="text-decoration:none">
-						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">${data2.name}</span>
+						<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom w3-Jua">${data2.name}</span>
 					</a>
 				</c:forEach>
 			</c:when>

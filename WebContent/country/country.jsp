@@ -8,11 +8,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Insert title here</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css?family=Raleway">
-<title>Insert title here</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Jua:400" rel="stylesheet">
+<style>
+.w3-Sunflower {
+	font-family: "Sunflower", Sans-serif;
+}
+.w3-Jua {
+	font-family: "Jua", Sans-serif;
+}
+</style>
 </head>
 <body>
 	<nav
@@ -49,14 +58,14 @@
 
 		<!-- About section -->
 		<div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about"> <!-- 나라 디테일 -->
-			<h4><b>${requestScope.selectCountry.name}</b></h4>
+			<h4 class="w3-Jua"><b>${requestScope.selectCountry.name}</b></h4>
 			<img src="images/country/${requestScope.selectCountry.imgPath}" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
-			<div class="w3-content w3-justify" style="max-width:600px">
+			<div class="w3-content w3-justify w3-Jua" style="max-width:600px">
 				<p>
 					${requestScope.selectCountry.info}
 				</p>
 
-				<h4 class="w3-padding-16" style="text-align: center">대표 맥주</h4>
+				<h4 class="w3-padding-16 w3-Jua" style="text-align: center">대표 맥주</h4>
 				<div class="w3-row-padding" style="margin:0 -16px">
 					<c:forEach items="${requestScope.selectBeer}" var="data">
 						<div class="w3-half w3-margin-bottom">
@@ -64,18 +73,11 @@
 								<li class="w3-black w3-xlarge w3-padding-32">
 									<img alt="맥주" src="images/beer/${data.imgPath}" width="100%">
 									<br>
-									<h2>${data.name}</h2>
+									<h3 class="w3-Jua">${data.name}</h3>
 								</li>
-								<li class="w3-padding-16">${data.alcohol}</li>
-								<li class="w3-padding-16">${data.kinds}</li>
-								<li class="w3-padding-16">${data.info}</li>
-								<li class="w3-padding-16">
-								<h2>$ 10</h2>
-								<span class="w3-opacity">per month</span>
-								</li>
-								<li class="w3-light-grey w3-padding-24">
-								<button class="w3-button w3-white w3-padding-large">Sign Up</button>
-								</li>
+								<li class="w3-padding-16 w3-Jua">${data.alcohol}</li>
+								<li class="w3-padding-16 w3-Jua">${data.kinds}</li>
+								<li class="w3-padding-16 w3-Jua" style="min-height:150px;">${data.info}</li>
 							</ul>
 						</div>
 					</c:forEach>

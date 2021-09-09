@@ -13,11 +13,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
 <link href="https://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Jua:400" rel="stylesheet">
 <style>
 .w3-Sunflower {
 	font-family: "Sunflower", Sans-serif;
 }
+.w3-Jua {
+	font-family: "Jua", Sans-serif;
+}
 </style>
+
 <title>Insert title here</title>
 </head>
 <body>
@@ -47,7 +52,44 @@
 				<!-- 대륙으로 나라조회 결과시 -->
 				<c:choose>
 				    <c:when test="${not empty requestScope.selectCountryList}">
-					    <c:forEach items="${requestScope.selectCountryList}" var="data">
+						<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="0" step="3" varStatus="status">
+		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
+		            			<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width:100%">		
+			            			<div class="w3-display-middle w3-display-hover">
+			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
+					            	</div>
+								</div>
+							</a>
+						</c:forEach>
+		            	</div>
+		            	<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="1" step="3" varStatus="status">
+		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
+		            			<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width:100%">		
+			            			<div class="w3-display-middle w3-display-hover">
+			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
+					            	</div>
+								</div>
+							</a>
+						</c:forEach>
+		            	</div>
+		            	<div class="w3-third">
+						<c:forEach items="${requestScope.selectCountryList}" var="data" begin="2" step="3" varStatus="status">
+		            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
+		            			<div class="w3-hover-opacity w3-display-container">
+									<img src="images/country/${data.imgPath}" style="width:100%">		
+			            			<div class="w3-display-middle w3-display-hover">
+			            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">${data.name}</p>
+					            	</div>
+								</div>
+							</a>
+						</c:forEach>
+		            	</div>
+		            	
+					    <%-- <c:forEach items="${requestScope.selectCountryList}" var="data" varStatus="status">
 							<div class="w3-third">
 			            		<a href="${url}controller?command=beer&country=${data.countryIdx}">
 			            			<div class="w3-hover-opacity w3-display-container">
@@ -58,13 +100,13 @@
 									</div>
 								</a>
 			            	</div>
-			       		</c:forEach>
+			       		</c:forEach> --%>
 				    </c:when>
 				    <c:when test="${empty requestScope.selectCountryList}">
             			<div class="w3-display-container">
 							<img src="images/country/empty.jpg" style="width:100%">		
 	            			<div class="w3-display-middle">
-	            				<p class="w3-xlarge font-effect-shadow-multiple">등록된 나라가 없습니다.</p>
+	            				<p class="w3-xlarge font-effect-shadow-multiple w3-Jua">등록된 나라가 없습니다.</p>
 			            	</div>
 						</div>
 			    	</c:when>
