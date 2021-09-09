@@ -28,10 +28,10 @@ public class Continent {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="continent_idx_seq")
 	private int continentIdx;
 	
-	@Column(name="name", length=20, nullable=false, unique=true)
+	@Column(name="name", length=30, nullable=false, unique=true)
 	private String name;
 	
 	@Column(name="country_idx", nullable=true, unique=true)
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="continentIdx")
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="continentIdx")
 	private List<Country> countryIdx;
 }
