@@ -31,8 +31,9 @@ INSERT INTO country values(country_idx_seq.NEXTVAL, '멕시코', 4, 'mexico.jpg'
 INSERT INTO country values(country_idx_seq.NEXTVAL, '에콰도르', 5, 'ecuador.jpg', '수도 : 키토<br>인구수 : 약 1,750만명<br>남아메리카에 위치한 나라로 콜롬비아와 페루 사이에 끼어 있는 작은 국가입니다. 안데스 산맥에서 밀림, 바다, 갈라파고스 제도까지 다양한 자연환경을 가지고 있어  다양한 야생동물들이 분포, 서식합니다. 현재 에콰도르 본토와 갈라파고스 제도 등 에콰도르 곳곳에 이러한 야생동식물들의 서식지를 보존하기 위해 국립공원들이 지정되어 있는데 특히 갈라파고스 제도는 섬 전체 면적의 97%가 국립공원입니다.');
 INSERT INTO country values(country_idx_seq.NEXTVAL, '브라질', 5, 'brazil.jpg', '수도 : 브라질리아<br>인구수 : 약 2억 1천만명<br>브라질 최남단 지역으로 파라과이, 아르헨티나, 우루과이에 접하며 남쪽으로 흐르는 파라나 강이 서쪽 국경구실을 하고 세계 3대 폭포로 꼽히는 거대한 폭포인 이과수 폭포가 있습니다. 파라냐 주, 히우그란지두술 주, 산타카타리나 주 등이 이에 해당한다. 북쪽 이과수 일대는 열대 사바나기후이지만 히우그란지두술과 산타카타리나 주는 완전한 아열대 즉 온대 습윤기후로 겨울 평균이 13도, 여름 평균이 24도 정도로 온난한 편이며 여름에도 더위가 생각보다 심하지 않습니다.');
 INSERT INTO country values(country_idx_seq.NEXTVAL, '칠레', 5, 'chile.jpg', '수도 : 산티아고<br>인구수 : 약 1,895만명<br>북중부의 연중 온난하고 건조한 맑은 기후, 안데스 산맥의 높은 해발고도, 비교적 안정된 국내정세 덕분에 하와이 마우나케아 산과 함께 지상에 건설되는 거대 망원경 건설의 최적지로 꼽힙니다. 국토 중앙을 안데스 산맥이 가로 막고 있고 길고 특이하게 생긴 국토 지형 때문에 사람들의 주거 공간이 태평양 연안 저지대 일대에 제한되어 있습니다. 옆나라 아르헨티나와 더불어 라틴아메리카 지역에서 영토 대비에 비해 인구가 적은 국가이기도 합니다.');
---아프리카
 
+
+--맥주
 --한국
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '카스', 4.5, '라거', 'test', 1, 'imagePath');
 --중국
@@ -61,16 +62,10 @@ INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '칼스버그', 5.0, '라거', 6);
 
 --뉴질랜드
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '엔지 퓨어', 5.0, '페일 라거', 1);
---파푸아뉴기니
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, ' ', 4.4, '라거', 2);
 --호주
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '빅토리아 비터', 4.6, '비터 라거', 3);
 --팔라우
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '레드 루스터', 5.0, '라거', 4);
---투발루
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---솔로몬제도
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
 
 --미국
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
@@ -78,35 +73,10 @@ INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
 --멕시코
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
---과테말라
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.2, '라거', 4);
---쿠바
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---자메이카
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
 
---아르헨티나
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
 --에콰도르
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
 --브라질
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
---우루과이
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.2, '라거', 4);
 --칠레
 INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---페루
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
-
---모로코
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 1);
---나이지리아
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.4, '라거', 2);
---이집트
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 4.7, '브라운 에일', 3);
---케냐
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.2, '라거', 4);
---에티오피아
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 5);
---모리셔스
-INSERT INTO beer VALUES(beer_idx_seq.NEXTVAL, '', 5.0, '라거', 6);
