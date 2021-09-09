@@ -73,7 +73,7 @@
 								<li class="w3-black w3-xlarge w3-padding-32">
 									<img alt="맥주" src="images/beer/${data.imgPath}" width="100%">
 									<br>
-									<h3>${data.name}</h3>
+									<h3 class="w3-Jua">${data.name}</h3>
 								</li>
 								<li class="w3-padding-16 w3-Jua">${data.alcohol}</li>
 								<li class="w3-padding-16 w3-Jua">${data.kinds}</li>
