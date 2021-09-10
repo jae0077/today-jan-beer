@@ -20,15 +20,15 @@
 
 -   jdk1.8.0_201
     
--   IDE : eclipse photon
+-   IDE : eclipse
     
--   DB : Oracle XE
+-   DB : Oracle XE 11g
     
 -   Server : tomcat 9.0
     
 -   **사용 기술**
     
-    `JPA` / `LOMBOK` / `Maven` / `HTML` / `CSS`
+    `JPA` / `LOMBOK` / `Maven` / `HTML` / `CSS` / `w3.css template`
     
 
 ## 🐳Database Modeling
@@ -309,8 +309,6 @@ w3-third를 3개만 만들어서 이미지 크기와 상관없이 위에서 아�
 </div>
 </details>
     
-## 👍Code Review
-
 
 ## ➕Improvements
 
