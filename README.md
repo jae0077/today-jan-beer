@@ -57,7 +57,7 @@
 ## 🛠Display
 
 <details>
-<summary>index.html</summary>
+<summary>main display</summary>
 <div markdown="1">       
 
 ![index](https://user-images.githubusercontent.com/44844956/132781747-c2bef578-9406-4789-8687-e145e492f3f4.png)
@@ -66,7 +66,7 @@
 </details>
 
 <details>
-<summary>continent.jsp</summary>
+<summary>continent display</summary>
 <div markdown="1">       
 
 ![continent](https://user-images.githubusercontent.com/44844956/132781752-a3750a2f-fc0f-432a-b569-4457309e31c7.png)
@@ -77,7 +77,7 @@
 </details>
 
 <details>
-<summary>country.jsp</summary>
+<summary>country display</summary>
 <div markdown="1">       
 
 ![country](https://user-images.githubusercontent.com/44844956/132781759-82030143-f361-481d-b3a0-7e9af666771b.png)
